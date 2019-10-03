@@ -114,5 +114,9 @@ jobs:
     - name: Build watchman
       run: python build/fbcode_builder/getdeps.py build --src-dir=. watchman
     - name: Test watchman
-      run: python build/fbcode_builder/getdeps.py test --src-dir=. watchman
+      run: python build/fbcode_builder/getdeps.py test --src-dir=. watchman  
+    - uses: actions/upload-artifact@master
+      with:
+        name: watchman
+        path: watchman
  
